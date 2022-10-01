@@ -10,6 +10,17 @@ let textDivTwo = document.getElementById("dis2txt");
 let cmprBtn = document.getElementById("comperBtn");
 let clrBtn = document.getElementById("cleanBtn");
 
+// Spaciel variables
+let colorArr = [];
+
+class userColor {
+  constructor(r, g, b) {
+    this.r = r;
+    this.g = g;
+    this.b = b;
+  }
+}
+
 let rgbColor = (r, g, b) => {
   return `rgb(${r}, ${g}, ${b}`;
 };
@@ -31,6 +42,9 @@ let globFunc = (display, text) => {
         ? blue.classList.add("err-border")
         : blue.classList.remove("err-border");
   } else {
+    let color = new userColor(red.value, green.value, blue.value);
+    colorArr.push(color);
+
     red.classList.remove("err-border");
     green.classList.remove("err-border");
     blue.classList.remove("err-border");
@@ -74,4 +88,8 @@ clrBtn.addEventListener("click", (evt) => {
   disDivTwo.style.backgroundColor = "inherit";
   textDivOne.innerHTML = "";
   textDivTwo.innerHTML = "";
+});
+
+textDivOne.addEventListener("click", () => {
+  textDivOne.style.backgroundColor = "red";
 });

@@ -6,4 +6,5 @@
 - The color will display in the main DIV [V]
 - The user can compre between 2 colors [V]
 - Clear button [V]
+- RGB to HEX -> Hex to RGB
 - The user will save the colors he wants

@@ -22,6 +22,11 @@
   width: 200px;
 }
 
+.disTxt {
+  cursor: pointer;
+  width: fit-content;
+}
+
 /* Special classes CSS */
 .bold {
   font-weight: bold;
