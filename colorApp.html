@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/js/colorApp.js" defer></script>
+    <link rel="stylesheet" href="/css/colorApp.css" />
+    <title>Color picker app</title>
+  </head>
+  <body>
+    <h1>Color picker</h1>
+
+    <h4>Please enter R, G and B values (0-255):</h4>
+    <form action="" id="colorForm">
+      <div>
+        <label for="red">R</label>
+        <input type="number" name="red" id="red" placeholder="0" />
+      </div>
+
+      <div>
+        <label for="green">G</label>
+        <input type="number" name="green" id="green" placeholder="0" />
+      </div>
+
+      <div>
+        <label for="blue">B</label>
+        <input type="number" name="blue" id="blue" placeholder="0" />
+      </div>
+
+      <button>Show in main</button>
+      <button id="comperBtn" class="hide">Compare</button>
+      <button id="cleanBtn" class="hide">Clean</button>
+    </form>
+
+    <div id="err" class="err-color"></div>
+
+    <div class="display-wraper">
+      <div class="inner">
+        <h4>Main</h4>
+        <div id="dis1" class="display"></div>
+        <ul id="dis1txt"></ul>
+      </div>
+
+      <div class="inner">
+        <h4>Compare</h4>
+        <div id="dis2" class="display"></div>
+        <ul id="dis2txt"></ul>
+      </div>
+    </div>
+  </body>
+</html>

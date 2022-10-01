@@ -1,0 +1,39 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+.display-wraper {
+  display: flex;
+}
+
+.inner:last-child {
+  margin: 0 15px;
+}
+
+.display-wraper h4 {
+  margin: 15px 0 0 0;
+}
+
+.display {
+  border: 1px black solid;
+  height: 200px;
+  width: 200px;
+}
+
+/* Special classes CSS */
+.bold {
+  font-weight: bold;
+}
+.hide {
+  display: none;
+}
+
+.err-border {
+  border: red 2px solid;
+}
+
+.err-color {
+  color: red;
+}
