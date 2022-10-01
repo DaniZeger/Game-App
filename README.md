@@ -1,7 +1,8 @@
 ## TO DO:
 
--Create color app:
-The user can pot 3 vlues of R, G & B
-The color will display in the main DIV
-The user will save the colors he wants
-The user can compre between 2 colors
+<br> Create color app: </br>
+
+- The user can pot 3 vlues of R, G & B
+- The color will display in the main DIV
+- The user will save the colors he wants
+- The user can compre between 2 colors
