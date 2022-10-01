@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/drafts/colorAppDraft.css" />
+    <title>Color App</title>
+  </head>
+  <body>
+    <h1>Color App</h1>
+
+    <h3>Please enter RGB values:</h3>
+    <form action="" id="colorForm">
+      <div>
+        <label for="red">Red:</label>
+        <input type="text" name="red" id="red" placeholder="0-255" />
+      </div>
+      <div>
+        <label for="green">Green:</label>
+        <input type="text" name="green" id="green" placeholder="0-255" />
+      </div>
+      <div>
+        <label for="blue">Blue:</label>
+        <input type="text" name="blue" id="blue" placeholder="0-255" />
+      </div>
+      <button>Submit</button>
+      <button id="compare" class="hide">Compare</button>
+    </form>
+
+    <button id="random">Random Color</button>
+
+    <div style="display: flex">
+      <div>
+        <h4>Main color (A)</h4>
+        <div id="resolt-a" class="resolt"></div>
+        <div id="color-a-value"></div>
+        <form action="" id="save-colorA" class="hide name-form">
+          <label for="myColorA">Name your color:</label>
+          <input type="text" name="myColorA" id="myColorA" />
+          <button>Save</button>
+          <button id="clearBtnA">Clear</button>
+        </form>
+      </div>
+
+      <div>
+        <h4>Compared color (B)</h4>
+        <div id="resolt-b" class="resolt"></div>
+        <div id="color-b-value"></div>
+      </div>
+
+      <div id="fav-list">
+      <h2>Saved color:</h2>
+
+    </div>
+
+    <script src="/drafts/colorAppDraft.js"></script>
+  </body>
+</html>

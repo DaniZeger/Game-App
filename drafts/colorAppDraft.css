@@ -1,0 +1,18 @@
+.resolt {
+  border: 1px solid black;
+  width: 250px;
+  height: 250px;
+}
+
+.name-form {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+.hide {
+  display: none;
+}
+
+h4 {
+  margin-bottom: 10px;
+}
