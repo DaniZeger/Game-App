@@ -58,9 +58,11 @@ let globFunc = (display, text) => {
     );
 
     text.innerHTML = `
+    <ul>
     <li> <span class="bold"> R: </span> ${red.value} </li>
     <li> <span class="bold"> G: </span> ${green.value} </li>
     <li> <span class="bold"> B: </span> ${blue.value} </li>
+    </ul>
     `;
 
     red.value = "";
