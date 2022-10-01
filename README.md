@@ -1,6 +1,6 @@
 ## TO DO:
 
-<br> Create color app: </br>
+<b> Create color app: </b>
 
 - The user can pot 3 vlues of R, G & B
 - The color will display in the main DIV
