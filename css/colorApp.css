@@ -4,22 +4,29 @@
   box-sizing: border-box;
 } */
 
+#colorForm{
+  display: flex;
+  flex-direction: column;
+}
+
+textarea, button {
+  width: 200px;
+}
+
+input {
+ width: 180px;
+}
+
+
 .display-wraper {
   display: flex;
-}
-
-.inner:last-child {
-  margin: 0 15px;
-}
-
-.display-wraper h4 {
   margin: 15px 0 0 0;
 }
 
 .display {
   border: 1px black solid;
   height: 200px;
-  width: 200px;
+  width: 450px;
 }
 
 .disTxt {

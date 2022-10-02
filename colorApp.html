@@ -28,8 +28,14 @@
         <input type="number" name="blue" id="blue" placeholder="0" />
       </div>
 
-      <button>Show in main</button>
-      <button id="comperBtn" class="hide">Compare</button>
+      <label for="txt">Exmple text (Optional)</label>
+      <textarea name="txt" id="txt" cols="30" rows="10" maxlength="100"></textarea>
+
+
+      
+
+      <button>Show Background</button>
+      <button id="comperBtn">Show Text</button>
       <button id="cleanBtn" class="hide">Clean</button>
     </form>
 
@@ -37,15 +43,13 @@
 
     <div class="display-wraper">
       <div class="inner">
-        <h4>Main</h4>
-        <div id="dis1" class="display"></div>
-        <div id="dis1txt" class="disTxt"></div>
-      </div>
-
-      <div class="inner">
-        <h4>Compare</h4>
-        <div id="dis2" class="display"></div>
-        <div id="dis2txt" class="disTxt"></div>
+        <div id="dis" class="display">
+          <p id="txt-exmple">Lorem, ipsum dolor</p>
+        </div>
+        <div>
+          <div id="bgtxt" class="disTxt"></div>
+          <div id="innertxt" class="disTxt"></div>
+        </div>
       </div>
     </div>
   </body>

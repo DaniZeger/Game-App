@@ -1,13 +1,16 @@
 // Geting the HTML elements
 let colorForm = document.getElementById("colorForm");
 let { red, green, blue } = colorForm.elements;
-let disDivOne = document.getElementById("dis1");
-let disDivTwo = document.getElementById("dis2");
-let errDiv = document.getElementById("err");
-let textDivOne = document.getElementById("dis1txt");
-let textDivTwo = document.getElementById("dis2txt");
+let exmpleTxt = document.getElementById("txt")
 
-let cmprBtn = document.getElementById("comperBtn");
+let disDiv = document.getElementById("dis");
+let bgValue = document.getElementById("bgtxt");
+let txtValue = document.getElementById("innertxt")
+let innerText = document.getElementById("txt-exmple")
+
+let errDiv = document.getElementById("err");
+
+let txtBtn = document.getElementById("comperBtn")
 let clrBtn = document.getElementById("cleanBtn");
 
 // Spaciel variables
@@ -25,8 +28,12 @@ let rgbColor = (r, g, b) => {
   return `rgb(${r}, ${g}, ${b}`;
 };
 
-let globFunc = (display, text) => {
-  if (red.value > 255 || green.value > 255 || blue.value > 255) {
+
+let globFunc = (display = "", exmple = "", text1, text2) => {
+  if(red.value === ""|| green.value === ""|| blue.value === ""){
+    errDiv.innerHTML = "One or more of the values is missing";
+
+  }else if (red.value > 255 || green.value > 255 || blue.value > 255) {
     errDiv.innerHTML = "One or more of the values is too high";
 
     let r =
@@ -56,8 +63,20 @@ let globFunc = (display, text) => {
       green.value,
       blue.value
     );
+    exmple.style.color = rgbColor(
+      red.value,
+      green.value,
+      blue.value
+    );
 
-    text.innerHTML = `
+    text1.innerHTML = `
+    <ul>
+    <li> <span class="bold"> R: </span> ${red.value} </li>
+    <li> <span class="bold"> G: </span> ${green.value} </li>
+    <li> <span class="bold"> B: </span> ${blue.value} </li>
+    </ul>
+    `;
+    text2.innerHTML = `
     <ul>
     <li> <span class="bold"> R: </span> ${red.value} </li>
     <li> <span class="bold"> G: </span> ${green.value} </li>
@@ -68,30 +87,36 @@ let globFunc = (display, text) => {
     red.value = "";
     green.value = "";
     blue.value = "";
-
-    cmprBtn.classList.remove("hide");
+    
     clrBtn.classList.remove("hide");
+    let exmpleTxtFunc = () => {
+      let txt = exmpleTxt.value
+      innerText.innerHTML = txt
+    
+      if(txt.length <= 20){
+        innerText.style.fontSize = "40px"
+      }else {
+        innerText.style.fontSize = "20px"
+      }
+    }
+  
+    exmpleTxtFunc()
   }
+  
 };
+
 
 colorForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
-  globFunc(disDivOne, textDivOne);
+  globFunc(disDiv, bgValue);
+  exmpleTxtFunc()
+
 });
 
-cmprBtn.addEventListener("click", (evt) => {
-  evt.preventDefault();
-  globFunc(disDivTwo, textDivTwo);
-});
+txtBtn.addEventListener("click", (evt)=>{
+  evt.preventDefault()
+  globFunc()
+})
 
-clrBtn.addEventListener("click", (evt) => {
-  evt.preventDefault();
-  disDivOne.style.backgroundColor = "inherit";
-  disDivTwo.style.backgroundColor = "inherit";
-  textDivOne.innerHTML = "";
-  textDivTwo.innerHTML = "";
-});
 
-textDivOne.addEventListener("click", () => {
-  textDivOne.style.backgroundColor = "red";
-});
+
